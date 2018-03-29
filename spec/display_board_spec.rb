@@ -184,6 +184,10 @@ describe "#display_board in 'lib/display_board.rb" do
       # example's situation.
       board = ["X", "X", "X", "X", "X", "X", "X", "X", "X"]
 
+      output = capture_puts{ display_board(board) } if defined?(display_board)
+      rows = output.split("\n")
+
+
       # *** Comment the line below by adding a # at the line start ***
       # expect(true).to be(true)
     end
